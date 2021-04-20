@@ -88,13 +88,13 @@ ps. 以上两项在刚安装好的时候会自动启动，不需手动执行
 
 小技巧：自动启动流媒体服务器的方法：
 
-自动运行流媒体服务器序非常简单，把上述命令添加在/etc/rc.d/rc.local脚本中即可。
+自动运行流媒体服务器序非常简单，把上述命令添加在`/etc/rc.d/rc.local`脚本中即可。
 
 最后在服务器输入 http://你的IP:1220/来访问web管理
 
 image
 
-默认的媒体文件存放在/usr/local/movies
+默认的媒体文件存放在`/usr/local/movies`
 
 你可以在web管理面板修改这个路径。
 
@@ -102,6 +102,25 @@ image
 
 可以使用VLC media player这个软件，输入
 
-rtsp://你的IP/sample_100kbit.mp4
+	rtsp://你的IP/sample_100kbit.mp4
 
 来播放默认的测试视频。如果你的网速够给力的话效果还不错 ：)
+
+5、RTSP流测试
+
+使用ffmpeg生成RTSP流:
+
+	./ffmpeg -re -i rtsp_test.mp4 -vcodec copy -codec copy -f rtsp rtsp://192.168.1.22/live/rtsp_test
+
+参考文档:
+
+http://wangheng.org/install-darwin-streaming-server-6-0-3-on-linux.html
+
+http://zhoushouby.blog.51cto.com/9150272/1437374
+
+————————————————
+
+版权声明：本文为CSDN博主「北雨南萍」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+
+原文链接：https://blog.csdn.net/fireroll/article/
+details/51062432
