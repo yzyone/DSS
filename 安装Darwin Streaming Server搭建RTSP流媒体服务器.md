@@ -5,7 +5,7 @@
 
 最开始是用live555MediaServer，这个部署很简单，但是live555MediaServer不支持3gp格式，无奈只能还其他的RTSP流媒体服务端软件。
 后面找到Darwin Streaming Server，这个是苹果公司的开源软件，目前Darwin Streaming Server的最新版本是6.0.3。
-不过经过我亲身尝试，要在Linux下源码编译安装最新版的Darwin Streaming Server v6.0.3是很困难的，需要打两个补丁(dss-6.0.3.patch和dss-hh-20080728-1.patch)以及替换Install安装脚本文件（无法下载），但就算打了这两个补丁也不一定能安装成功（编译环境存在问题？），所以如果要装Darwin Streaming Server v6.0.3，建议通过RPM包安装，可参考下面这篇文章：
+不过经过我亲身尝试，要在Linux下源码编译安装最新版的Darwin Streaming Server v6.0.3是很困难的，需要打两个补丁(`dss-6.0.3.patch和dss-hh-20080728-1.patch`)以及替换Install安装脚本文件（无法下载），但就算打了这两个补丁也不一定能安装成功（编译环境存在问题？），所以如果要装Darwin Streaming Server v6.0.3，建议通过RPM包安装，可参考下面这篇文章：
 
 如果确实要源码编译安装最新版的Darwin Streaming Server 6.0.3，请参考以下两篇文章：
 
